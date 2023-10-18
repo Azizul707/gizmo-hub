@@ -1,13 +1,39 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
 
+  const {loginUser,googleLogin} = useContext( AuthContext )
 
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then()
+      .catch()
+  }
   const handleLogin = ( e ) => {
+
+
     e.preventDefault();
+    const form = e.target;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email,password);
+
+    loginUser( email, password )
+      
+      .then( result => {
+        if ( result.user ) {
+          toast.success( 'Login Successfully' );
+          form.reset();
+          
+      }
+      } )
+      .catch( error => {
+        console.log(error.message);
+        toast.error( "Some Error Ocurred" );
+    })
+
   }
 
 
@@ -31,7 +57,7 @@ const Login = () => {
         </div>
           
         <div className="mb-4">
-          <button className="bg-red-500 text-white rounded px-4 py-2">Login with Google</button>
+          <button onClick={handleGoogleLogin} className="bg-red-500 text-white rounded px-4 py-2">Login with Google</button>
         </div>
           
         <div className="text-center">
