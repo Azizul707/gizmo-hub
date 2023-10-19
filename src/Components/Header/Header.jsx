@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 const Header = () => {
 
     const { user, singOutUser } = useContext( AuthContext );
-    console.log( user );
+    
 
     const handleLogOut = () => {
         singOutUser()

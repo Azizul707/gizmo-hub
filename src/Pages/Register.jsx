@@ -73,7 +73,7 @@ const Register = () => {
                         <input type="submit" value="Register" className="bg-blue-500 text-white rounded px-4 py-2" />
                     </div>
                     <div className="mb-4">
-                        <button onClick={handleGoogleLogin} className="bg-red-500 text-white rounded px-4 py-2">Login with Google</button>
+                        <button onClick={handleGoogleLogin} className="bg-neutral text-white rounded px-4 py-2">Login with Google</button>
                     </div>
 
                     <div className="text-center">
