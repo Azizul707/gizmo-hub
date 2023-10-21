@@ -1,32 +1,32 @@
 [
     {
       "id": 1,
-      "brandName": "Samsung",
+      "brandName": "samsung",
       "brandImage": "https://cdn.freebiesupply.com/logos/large/2x/samsung-1-logo-png-transparent.png"
     },
     {
       "id": 2,
-      "brandName": "Apple",
+      "brandName": "apple",
       "brandImage": "https://static.vecteezy.com/system/resources/previews/019/766/198/non_2x/apple-logo-apple-icon-transparent-free-png.png"
     },
     {
       "id": 3,
-      "brandName": "Sony",
+      "brandName": "sony",
       "brandImage": "https://static.vecteezy.com/system/resources/previews/020/975/554/non_2x/sony-logo-sony-icon-transparent-free-png.png"
     },
     {
       "id": 4,
-      "brandName": "LG",
+      "brandName": "lg",
       "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZjL28ym4Nz3Bbk1i27B1OV3YKqGBMvzcKSg&usqp=CAU"
     },
     {
       "id": 5,
-      "brandName": "Panasonic",
+      "brandName": "panasonic",
       "brandImage": "https://static.vecteezy.com/system/resources/previews/022/100/977/non_2x/panasonic-logo-transparent-free-png.png"
     },
     {
       "id": 6,
-      "brandName": "Bose",
+      "brandName": "bose",
       "brandImage": "https://www.lafrancecorp.com/hs-fs/hubfs/images/industries/electronics/electronics-bose-image.png?width=349&name=electronics-bose-image.png"
     }
   ]

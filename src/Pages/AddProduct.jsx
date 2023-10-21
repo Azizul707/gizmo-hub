@@ -1,9 +1,12 @@
 /* eslint-disable no-unused-vars */
 
+import toast from "react-hot-toast";
+
 const AddProduct = () => {
 
     const handleAddProduct = ( e ) => {
         e.preventDefault();
+        const form = e.target;
         const productName = e.target.name.value;
         const image = e.target.image.value;
         const brandName = brandSelect.options[ brandSelect.selectedIndex ].text;
@@ -12,8 +15,23 @@ const AddProduct = () => {
         const description = e.target.description.value;
         const rating = e.target.rating.value;
 
-        const values = { productName, image, brandName, productCategory, price, description, rating };
-        console.log( values );
+        const products = { productName, image, brandName, productCategory, price, description, rating };
+        console.log( products );
+
+
+        fetch( 'http://localhost:5001/products', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify( products )
+        } )
+            .then( res => res.json() )
+            .then( data => { console.log( data ) } )
+        toast.success( 'Product Added Successfully' )
+        form.reset();
+
+
     }
 
 
@@ -41,12 +59,12 @@ const AddProduct = () => {
                         <label htmlFor="password" className="block pb-2 pl-1">Select a Brand:</label>
 
                         <select className="w-full py-2" id="brandSelect" name="brandSelect">
-                            <option value="1">Samsung</option>
-                            <option value="2">Apple</option>
-                            <option value="3">Sony</option>
-                            <option value="4">LG</option>
-                            <option value="5">Panasonic</option>
-                            <option value="6">Bose</option>
+                            <option value="1">samsung</option>
+                            <option value="2">apple</option>
+                            <option value="3">sony</option>
+                            <option value="4">lg</option>
+                            <option value="5">panasonic</option>
+                            <option value="6">bose</option>
                         </select>
                     </div>
                     <div className="mb-4 w-1/2">
@@ -71,7 +89,7 @@ const AddProduct = () => {
                     <input type="text" id="password" name="rating" className="border rounded px-3 py-2 w-full" required />
                 </div>
                 <div className="">
-                    <div className="py-5 md:ml-[28rem]"> <input type="submit" value="Add Product" className="bg-blue-500 text-white rounded px-4 py-2" /></div>
+                    <div className="py-5 md:ml-[28rem]"> <input type="submit" value="Add Product" className="bg-blue-500 cursor-pointer text-white rounded px-4 py-2" /></div>
                 </div>
 
 

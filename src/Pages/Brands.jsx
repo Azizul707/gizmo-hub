@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const Brands = ( { brand } ) => {
-    console.log(brand);
+    const brandsName = brand.brandName;
+
+        
 
     return (
         <div>
@@ -13,7 +17,7 @@ const Brands = ( { brand } ) => {
                         <img src={ brand.brandImage } />
                     </div>
                 </div>
-                    <div className=""><button className="bg-neutral py-1 px-2 rounded text-slate-300">All Collection</button></div>
+                    <div className=""><Link to={`/products/${brandsName}`}><button className="bg-neutral py-1 px-2 rounded text-slate-300">All Collection</button></Link></div>
             </div>
         </div>
     );
