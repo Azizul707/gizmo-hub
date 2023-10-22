@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { FaCartFlatbedSuitcase } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 
 const Header = () => {
-
+    const {id} = useParams()
     const { user, singOutUser } = useContext( AuthContext );
 
 
@@ -33,12 +33,14 @@ const Header = () => {
                             <NavLink to='/'>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/add-product'>Add Product</NavLink>
+                            {
+                                user? <NavLink to='/add-product'>Add Product</NavLink>: ''
+                            }
                         </li>
                     </ul>
                 </nav>
 
-                <div className="flex items-center gap-3 font-semibold"><button>My Cart</button><FaCartFlatbedSuitcase className="text-3xl font-bold"></FaCartFlatbedSuitcase></div>
+                <div className="flex items-center gap-3 font-semibold"><NavLink to='/cart'><button>My Cart</button></NavLink><FaCartFlatbedSuitcase className="text-3xl font-bold"></FaCartFlatbedSuitcase></div>
                 <div className="">
                     {
                         user ? <div className="flex items-center gap-3">

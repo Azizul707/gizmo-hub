@@ -37,8 +37,10 @@ const AuthProvider = ( { children } ) => {
     useEffect( () => {
         onAuthStateChanged( auth, ( user ) => {
             setUser( user );
-            setLoading( true );
-        })
+            setLoading( false );
+       } );
+       
+        
     },[auth])
     
 

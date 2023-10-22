@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
 
@@ -12,13 +13,37 @@ const ProductDetails = () => {
 
     const [ newProduct, setNewProduct ] = useState( null );
 
+    const name = newProduct?.name;
+    const price = newProduct?.price;
+    const image = newProduct?.image;
+
+    const addToCart = { name, price, image };
+
     useEffect( () => {
 
         const findProduct = products?.find( product => product._id == id )
         setNewProduct( findProduct )
 
-    }, [ id, products ] )
+    }, [ id, products ] );
 
+
+    const handleAddToCart = () => {
+        fetch( 'http://localhost:5000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type':'application/json',
+            },
+            body: JSON.stringify( addToCart )
+        } )
+            .then( res => res.json() )
+            .then( data => {
+                if ( data?.insertedId ) {
+                    toast.success('Product Added To Cart')
+                }
+            } )
+        
+    }
+ 
 
 
 
@@ -28,13 +53,7 @@ const ProductDetails = () => {
 
                 <div className="py-5 flex gap-10">
                     <h2 className="text-2xl font-semibold">{ newProduct?.name }</h2>
-                    <div className="rating">
-                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"  />
-                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
-                    </div>
+                    
 
                     <hr />
                 </div>
@@ -48,9 +67,54 @@ const ProductDetails = () => {
                         <p><span className="font-semibold" >Short Descriptions: </span>{ newProduct?.shortdescription }</p> <hr />
 
                         <div className="w-full">
-                            <button className="flex items-center gap-5 justify-center w-full mx-auto md:mt-28 bg-neutral text-white p-2 rounded font-semibold"> <span>Add To Cart</span> <span><FaCartShopping /></span></button>
+                            
+                            <button onClick={handleAddToCart} className="flex items-center gap-5 justify-center w-full mx-auto md:mt-28 bg-neutral text-white p-2 rounded font-semibold"> <span>Add To Cart</span> <span><FaCartShopping /></span></button>
+                           
                         </div>
                     </div>
+                </div>
+            </section>
+            <section className="mt-40">
+
+                <div className="">
+
+                    <div className="font-bold text-slate-500 text-center border-b-4 pb-4">
+                        <span className="hover:bg-neutral p-2 rounded" >Details</span>
+                        <span className="ml-10 hover:bg-neutral p-2 rounded">More Information</span>
+                        <span className="ml-10 hover:bg-neutral p-2 rounded">Reviews</span>
+                        <span className="ml-10 hover:bg-neutral p-2 rounded">Product Question</span>
+                    </div>
+                </div>
+                <div className="mt-10 max-w-screen-md">
+                    <h1 className="text-2xl font-semibold">{ newProduct?.name }</h1><hr /> <br /><br />
+                    <p className="text-2xl font-semibold">Product Over View</p>
+                    <p>The Panasonic Lumix GH5 is a flagship mirrorless camera designed to meet the demands of professional photographers and videographers. Renowned for its exceptional image quality, robust build, and advanced video capabilities, the GH5 is a versatile tool that empowers creatives to capture stunning visuals.</p> <br />
+                    <p className="text-xl font-semibold">Key Features</p><br />
+                    <p><span className="text-md font-semibold">Outstanding Image Quality: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">Outstanding Image Quality: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">4K Video Excellence: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">5-Axis Dual I.S: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">Advanced Autofocus: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">Rugged Build: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">Articulating Touchscreen: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    <p><span className="text-md font-semibold">Professional Audio: </span>
+                    
+                        The GH5 boasts a 20.3-megapixel Digital Live MOS sensor and Venus Engine processor, delivering high-resolution images with exceptional clarity and dynamic range.</p> <br />
+                    
                 </div>
 
             </section>
