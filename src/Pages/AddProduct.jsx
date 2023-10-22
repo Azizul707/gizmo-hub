@@ -16,10 +16,9 @@ const AddProduct = () => {
         const rating = e.target.rating.value;
 
         const products = { productName, image, brandName, productCategory, price, description, rating };
-        console.log( products );
 
 
-        fetch( 'http://localhost:5001/products', {
+        fetch( 'http://localhost:5000/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

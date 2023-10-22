@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
+import Slider from "../Components/Slider";
 
 const ProductPage = () => {
     const brandsName = useParams()
@@ -8,7 +9,7 @@ const ProductPage = () => {
    
     const [ products, setProducts ] = useState( [] );
 
-    console.log(products);
+    
     
    
     useEffect( () => {
@@ -19,10 +20,14 @@ const ProductPage = () => {
     
 
     return (
-        <div className="grid md:grid-cols-3 gap-5 justify-items-center mt-10">
+        <div className="">
+            <div className=""><Slider/></div>
+        <div className="grid md:grid-cols-3 gap-5 justify-items-center mt-14">
+            
             {
                 products?.map((product,idx)=><ProductCard key={idx} product={product}></ProductCard>)
           }
+        </div>
         </div>
     );
 };

@@ -8,8 +8,7 @@ const Slider = () => {
         <div id="slide1" className="carousel-item relative w-full">
             <img src="https://img.freepik.com/free-psd/sales-discount-facebook-template_23-2149959351.jpg?w=1060&t=st=1697612768~exp=1697613368~hmac=a874319d98058f0391ad4aff8dcf222e9cf634a350d0dbbc6c0629a0b9263c3b" className="w-full " />
             <div className="absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-20 ">
-                {/* <h4 className="text-5xl font-bold text-white p-2 md:mt-40 md:ml-40 ">The Ultimate Choice  for <br /> Exceptional Corporate <br /> Event Management</h4>
-                <p className="text-white p-2 md:mt-10 md:ml-40 w-[50rem]"> With our wealth of experience and unwavering commitment to excellence, we specialize in crafting and executing corporate events that leave a lasting impact. From meticulously planned conferences to flawlessly executed product launches, our dedicated team ensures that every detail is handled with precision and care.</p> */}
+                
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide4" className="btn btn-circle">❮</a>
@@ -20,8 +19,7 @@ const Slider = () => {
             <img src="https://img.freepik.com/free-psd/black-friday-super-sale-facebook-cover-template_106176-1544.jpg?w=1380&t=st=1697612667~exp=1697613267~hmac=6c8d9feead0315c844560d1ee15e5301d6a1c47ed802a91ecdf5ea94332f4688
             " className="w-full" />
             <div className="absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-20 ">
-                {/* <h4 className="text-5xl font-bold text-white p-2 md:mt-40 md:ml-40 ">The Ultimate Choice  for <br /> Exceptional Corporate <br /> Event Management</h4>
-                <p className="text-white p-2 md:mt-10 md:ml-40 w-[50rem]"> With our wealth of experience and unwavering commitment to excellence, we specialize in crafting and executing corporate events that leave a lasting impact. From meticulously planned conferences to flawlessly executed product launches, our dedicated team ensures that every detail is handled with precision and care.</p> */}
+                
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide1" className="btn btn-circle">❮</a>
@@ -31,8 +29,7 @@ const Slider = () => {
         <div id="slide3" className="carousel-item relative w-full">
             <img src="https://img.freepik.com/free-psd/black-friday-super-sale-facebook-cover-template_106176-1577.jpg?w=1380&t=st=1697613108~exp=1697613708~hmac=b1897a83d669b9cc7c059880f612c69899ca64547b8cf5afe690617f21af2634" className="w-full" />
             <div className="absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-20 ">
-                {/* <h4 className="text-5xl font-bold text-white p-2 md:mt-40 md:ml-40 ">The Ultimate Choice  for <br /> Exceptional Corporate <br /> Event Management</h4> */}
-                {/* <p className="text-white p-2 md:mt-10 md:ml-40 w-[50rem]"> With our wealth of experience and unwavering commitment to excellence, we specialize in crafting and executing corporate events that leave a lasting impact. From meticulously planned conferences to flawlessly executed product launches, our dedicated team ensures that every detail is handled with precision and care.</p> */}
+                
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide2" className="btn btn-circle">❮</a>
@@ -43,8 +40,7 @@ const Slider = () => {
             <img src="https://img.freepik.com/free-psd/futuristic-cyber-monday-banner-template_23-2149117343.jpg?w=1060&t=st=1697612580~exp=1697613180~hmac=823fb36a260a739361ec085a70c093d01c607eba10dd0720c4abfa3f08147d28
             " className="w-full" />
             <div className="absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-20 ">
-                {/* <h4 className="text-5xl font-bold text-white p-2 md:mt-40 md:ml-40 ">The Ultimate Choice  for <br /> Exceptional Corporate <br /> Event Management</h4>
-                <p className="text-white p-2 md:mt-10 md:ml-40 w-[50rem]"> With our wealth of experience and unwavering commitment to excellence, we specialize in crafting and executing corporate events that leave a lasting impact. From meticulously planned conferences to flawlessly executed product launches, our dedicated team ensures that every detail is handled with precision and care.</p> */}
+               
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide3" className="btn btn-circle">❮</a>
