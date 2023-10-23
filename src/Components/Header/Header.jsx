@@ -67,10 +67,10 @@ const Header = () => {
                 <div className="">
 
                     {
-                        user ? <button onClick={ handleLogOut } className="btn">Logout</button>
+                        user ? <button onClick={ handleLogOut } className="btn btn-primary">Logout</button>
                             :
                             <Link to='/login'>
-                                <button className="btn">Login</button> </Link>
+                                <button className="btn glass">Login</button> </Link>
                     }
 
 

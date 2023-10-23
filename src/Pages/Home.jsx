@@ -1,6 +1,7 @@
 import { FaCaravan, FaHeadphonesSimple, FaMoneyBillTransfer, FaOpencart } from "react-icons/fa6";
 import { useLoaderData } from "react-router-dom";
 import Brands from "./Brands";
+import SliderProduct from "../Components/SliderProduct";
 
 const Home = () => {
 
@@ -58,6 +59,7 @@ const Home = () => {
 
             <section className="max-w-screen-xl mx-auto mt-32">
 
+                <SliderProduct/>
                 
             </section>
         </div>
