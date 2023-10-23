@@ -13,8 +13,8 @@ const Home = () => {
         <div>
             <div className="">
             <section>
-                <div className=" ">
-                    <img className="w-full h-[85vh]" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7bad8c93546277.5f48a570f12f8.jpg" alt="" />
+                <div className="max-w-screen-2xl mx-auto ">
+                    <img className="w-full " src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7bad8c93546277.5f48a570f12f8.jpg" alt="" />
                 </div>
             </section>
             </div>
@@ -52,7 +52,8 @@ const Home = () => {
                 </div>
             </section>
             <section className="max-w-screen-xl mx-auto mt-32">
-                <div className="my-10">
+                <div className="bg-blue-50 max-w-fit p-5 rounded-md"><h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Grab The Latest Offer Now!</h1></div>
+                <div className=" px-8 my-10">
                     <img className="rounded-xl" src="https://static.vecteezy.com/system/resources/previews/008/601/839/non_2x/online-shopping-background-design-free-vector.jpg" alt="" />
                 </div>
             </section>

@@ -23,7 +23,7 @@ const Header = () => {
 
     return (
         <div className="bg-[#f1f1f1f1]">
-            <div className="md:flex justify-between items-center py-2  max-w-screen-xl mx-auto">
+            <div className="flex justify-between items-center p-2  max-w-screen-xl mx-auto">
 
                 <div className=""><img className="h-24" src="https://i.ibb.co/MPvtQnx/logo-removebg-preview.png" alt="" /></div>
 
@@ -40,7 +40,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <div className="flex items-center gap-3 font-semibold"><NavLink to='/cart'><button>My Cart</button></NavLink><FaCartFlatbedSuitcase className="text-3xl font-bold"></FaCartFlatbedSuitcase></div>
+                <div className="flex items-center gap-3 font-semibold px-2"><NavLink to='/cart'><button><FaCartFlatbedSuitcase className="text-3xl font-bold"></FaCartFlatbedSuitcase></button></NavLink></div>
                 <div className="">
                     {
                         user ? <div className="flex items-center gap-3">

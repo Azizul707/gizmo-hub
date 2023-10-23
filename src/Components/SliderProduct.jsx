@@ -1,9 +1,9 @@
 const SliderProduct = () => {
     return (
         <div>
-            <h4 className="text-2xl font-semibold">Trending Devices</h4><br /> <hr /><br />
+            <h4 className="text-4xl font-bold">Trending Devices</h4><br /> <hr /><br />
 
-            <div className="grid md:grid-cols-3 gap-5">
+            <div className="grid justify-items-center md:grid-cols-3 gap-5">
                 {/* item one */ }
                 <div className="">
                     <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
