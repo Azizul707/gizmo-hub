@@ -7,15 +7,15 @@ const AddProduct = () => {
     const handleAddProduct = ( e ) => {
         e.preventDefault();
         const form = e.target;
-        const productName = e.target.name.value;
+        const name = e.target.name.value;
         const image = e.target.image.value;
-        const brandName = brandSelect.options[ brandSelect.selectedIndex ].text;
-        const productCategory = e.target.category.value;
+        const brandname = brandSelect.options[ brandSelect.selectedIndex ].text;
+        const type = e.target.category.value;
         const price = e.target.price.value;
-        const description = e.target.description.value;
+        const shortdescription = e.target.description.value;
         const rating = e.target.rating.value;
 
-        const products = { productName, image, brandName, productCategory, price, description, rating };
+        const addProducts = { name, image, brandname, type, price, shortdescription, rating };
 
 
         fetch( 'http://localhost:5000/products', {
@@ -23,7 +23,7 @@ const AddProduct = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify( products )
+            body: JSON.stringify( addProducts )
         } )
             .then( res => res.json() )
             .then( data => { console.log( data ) } )
@@ -79,7 +79,7 @@ const AddProduct = () => {
                     </div>
                     <div className="mb-4 w-1/2">
                         <label htmlFor="password" className="block pb-2 pl-1">Short Description:</label>
-                        <input type="textarea" id="password" name="description" className="border rounded px-3 py-2 w-full" required />
+                        <input type="text" id="" name="description" className="border rounded px-3 py-2 w-full" required />
                     </div>
 
                 </div>

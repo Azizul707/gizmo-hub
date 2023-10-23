@@ -1,11 +1,18 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
 
-  const {loginUser,googleLogin} = useContext( AuthContext )
+  const datas = useLoaderData();
+  console.log(datas);
+
+  
+  const { loginUser, googleLogin } = useContext( AuthContext )
+  
+  const location = useLocation()
+  const navigate = useNavigate();
 
   const handleGoogleLogin = () => {
     googleLogin()
@@ -26,6 +33,9 @@ const Login = () => {
         if ( result.user ) {
           toast.success( 'Login Successfully' );
           form.reset();
+          navigate(location?.state?location.state : '/' );
+
+        
           
       }
       } )

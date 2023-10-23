@@ -15,7 +15,10 @@ const ProductPage = () => {
     useEffect( () => {
         fetch( `http://localhost:5000/products/${ brandSelect}`, )
         .then( res => res.json() )
-        .then( data =>setProducts(data) )
+            .then( data => {
+                console.log(data)
+                setProducts( data )
+            } )
    },[brandSelect])
     
 
