@@ -1,8 +1,18 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Link: 
 
-Currently, two official plugins are available:
+Here are five key features of this website:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+=============================== GizmoHUb ====================================
+
+* In this website in the home page we have a nav bar a banner , and 6 brand logo and all collection button is abvailable for buying product.
+
+* If user clicks on any brand then he will navigate to that spacicfic brands product page.
+
+* In the product page there have a slider for discounted offer and every product card has two button add see details and update products.
+
+* See details and update product page is private ,only when a user is logged in only then he can go to that destination other wise he will go to the login page.
+
+* after succesfull login the user will redirect to his previous session.
+
+* We have email password authentication system and google login options too.
