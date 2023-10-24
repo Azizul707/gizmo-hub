@@ -28,7 +28,7 @@ const ProductDetails = () => {
 
 
     const handleAddToCart = () => {
-        fetch( 'http://localhost:5000/cart', {
+        fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type':'application/json',

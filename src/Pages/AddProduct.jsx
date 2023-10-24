@@ -18,7 +18,7 @@ const AddProduct = () => {
         const addProducts = { name, image, brandname, type, price, shortdescription, rating };
 
 
-        fetch( 'http://localhost:5000/products', {
+        fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

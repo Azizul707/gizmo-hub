@@ -22,16 +22,16 @@ const createRouter = createBrowserRouter( [ {
         },
         {
             path: '/add-product',
-            element:<PrivateRoute><AddProduct/></PrivateRoute>
+            element: <PrivateRoute><AddProduct /></PrivateRoute>
         },
         {
             path: '/login',
             element: <Login />,
-            loader: () => fetch('http://localhost:5000/products'),
+            loader: () => fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products' ),
         },
         {
             path: '/register',
-            element:<Register/>
+            element: <Register />
         },
         {
             path: '/products/:product',
@@ -39,18 +39,18 @@ const createRouter = createBrowserRouter( [ {
         },
         {
             path: '/details/:id',
-            loader:()=>fetch('http://localhost:5000/products/'),
-            element:<PrivateRoute><ProductDetails/></PrivateRoute>
+            loader: () => fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products/' ),
+            element: <PrivateRoute><ProductDetails /></PrivateRoute>
         },
         {
             path: '/update/:id',
-            loader:({params})=>fetch(`http://localhost:5000/updateProduct/${params.id}`),
-            element:<PrivateRoute><Update/></PrivateRoute>
+            loader: ( { params } ) => fetch( `https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/updateProduct/${ params.id }` ),
+            element: <PrivateRoute><Update /></PrivateRoute>
         },
         {
             path: '/cart/',
-            loader:()=> fetch( 'http://localhost:5000/cart' ),
-            element:<PrivateRoute><Cart/></PrivateRoute>
+            loader: () => fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/cart' ),
+            element: <PrivateRoute><Cart /></PrivateRoute>
         }
     ]
 

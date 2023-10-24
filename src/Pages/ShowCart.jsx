@@ -13,7 +13,7 @@ const ShowCart = ( { product } ) => {
     
     const handleDelete = ( id ) => {
         
-        fetch( `http://localhost:5000/cart/${ id }`, {
+        fetch( `https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/cart/${ id }`, {
             method: 'DELETE',
         } )
             .then( res => res.json() )

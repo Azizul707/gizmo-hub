@@ -23,7 +23,7 @@ const Update = () => {
         const updatedProducts = { productName, image, productCategory, price, description, rating };
 
 
-        fetch( `http://localhost:5000/products/${id}`, {
+        fetch( `https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
