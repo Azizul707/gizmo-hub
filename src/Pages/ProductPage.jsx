@@ -13,7 +13,7 @@ const ProductPage = () => {
     
    
     useEffect( () => {
-        fetch( `https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products/${ brandSelect}`, )
+        fetch( `https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/products/select/${ brandSelect}`, )
         .then( res => res.json() )
             .then( data => {
                 console.log(data)

@@ -21,35 +21,35 @@ const createRouter = createBrowserRouter( [ {
             loader: () => fetch( '/brands.json' ),
         },
         {
-            path: '/add-product',
+            path: 'add-product',
             element: <PrivateRoute><AddProduct /></PrivateRoute>
         },
         {
-            path: '/login',
+            path: 'login',
             element: <Login />,
-            loader: () => fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products' ),
+            loader: () => fetch( 'https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/' ),
         },
         {
-            path: '/register',
+            path: 'register',
             element: <Register />
         },
         {
-            path: '/products/:product',
+            path: 'products/:product',
             element: <ProductPage />,
         },
         {
-            path: '/details/:id',
-            loader: () => fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/products/' ),
+            path: 'details/:id',
+            loader: () => fetch( 'https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/' ),
             element: <PrivateRoute><ProductDetails /></PrivateRoute>
         },
         {
-            path: '/update/:id',
-            loader: ( { params } ) => fetch( `https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/updateProduct/${ params.id }` ),
+            path: 'update/:id',
+            loader: ( { params } ) => fetch( `https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/${ params.id }` ),
             element: <PrivateRoute><Update /></PrivateRoute>
         },
         {
-            path: '/cart/',
-            loader: () => fetch( 'https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/cart' ),
+            path: 'cart',
+            loader: () => fetch( 'https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/cart' ),
             element: <PrivateRoute><Cart /></PrivateRoute>
         }
     ]

@@ -13,7 +13,7 @@ const ShowCart = ( { product } ) => {
     
     const handleDelete = ( id ) => {
         
-        fetch( `https://gizmo-hub-server-dah6y3v2e-theappboundmarketing-gmailcom.vercel.app/cart/${ id }`, {
+        fetch( `https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/cart/${ id }`, {
             method: 'DELETE',
         } )
             .then( res => res.json() )
