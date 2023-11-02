@@ -1,26 +1,22 @@
 /* eslint-disable react/prop-types */
-
-import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const ShowCart = ( { product } ) => {
 
     const {_id, image, name, price } = product;
-
-    const [ item, setItem ] = useState( [] );
    
 
     
     const handleDelete = ( id ) => {
         
-        fetch( `https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/cart/${ id }`, {
+        fetch( `https://my-gizmo-hub-server.vercel.app/cart/${ id }`, {
             method: 'DELETE',
         } )
             .then( res => res.json() )
             .then( data => {
                 if ( data.deletedCount > 0 ) {
                     toast.success( 'Product Removed From Cart!' )
-                    setItem( data );
+                    
             }} )
     }
 

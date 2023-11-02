@@ -27,7 +27,7 @@ const createRouter = createBrowserRouter( [ {
         {
             path: 'login',
             element: <Login />,
-            loader: () => fetch( 'https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/' ),
+            loader: () => fetch( 'https://my-gizmo-hub-server.vercel.app/' ),
         },
         {
             path: 'register',
@@ -39,17 +39,17 @@ const createRouter = createBrowserRouter( [ {
         },
         {
             path: 'details/:id',
-            loader: () => fetch( 'https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/' ),
+            loader: () => fetch( 'https://my-gizmo-hub-server.vercel.app/' ),
             element: <PrivateRoute><ProductDetails /></PrivateRoute>
         },
         {
             path: 'update/:id',
-            loader: ( { params } ) => fetch( `https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/${ params.id }` ),
+            loader: ( { params } ) => fetch( `https://my-gizmo-hub-server.vercel.app/${ params.id }` ),
             element: <PrivateRoute><Update /></PrivateRoute>
         },
         {
             path: 'cart',
-            loader: () => fetch( 'https://gizmo-hub-server-cshtl15lq-theappboundmarketing-gmailcom.vercel.app/cart' ),
+            loader: () => fetch( 'https://my-gizmo-hub-server.vercel.app/cart' ),
             element: <PrivateRoute><Cart /></PrivateRoute>
         }
     ]
